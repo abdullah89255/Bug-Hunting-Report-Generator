@@ -30,13 +30,13 @@ It will:
 Put `bug_report.py` somewhere convenient, then run:
 
 ```bash
-python3 /path/to/bug_report.py ./clearme.com --open-report --open-html
+python3 /path/to/bug_report.py --open-report --open-html
 ```
 
 For the directory shown in your screenshot, for example:
 
 ```bash
-python3 /path/to/bug_report.py ./clearme.com --open-report --open-html
+python3 /path/to/bug_report.py --open-report --open-html
 ```
 
 The report will be created inside the target directory as:
@@ -48,7 +48,7 @@ bug_hunting_report.html
 ### If you also want it to open discovered URLs
 
 ```bash
-python3 /path/to/bug_report.py ./clearme.com --open-report --open-html --open-urls
+python3 /path/to/bug_report.py --open-report --open-html --open-urls
 ```
 
 It will ask:
@@ -64,7 +64,7 @@ I deliberately made URL opening opt-in because a large project can contain hundr
 The default maximum amount read from each text file is **8 MB**. You can increase it:
 
 ```bash
-python3 /path/to/bug_report.py ./clearme.com \
+python3 /path/to/bug_report.py
     --max-read-mb 32 \
     --open-report \
     --open-html
@@ -73,7 +73,7 @@ python3 /path/to/bug_report.py ./clearme.com \
 For a very large directory where hashing takes too long:
 
 ```bash
-python3 /path/to/bug_report.py ./clearme.com \
+python3 /path/to/bug_report.py
     --no-hash \
     --open-report
 ```
